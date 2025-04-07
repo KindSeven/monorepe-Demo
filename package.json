@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:demo-1": "pnpm run -C packages/vue-demo1 dev",
+    "dev:demo-2": "pnpm run -C packages/vue-demo2 dev",
+    "build:demo-1": "pnpm run -C packages/vue-demo1 build",
+    "build:demo-2": "pnpm run -C packages/vue-demo2 build",
+    "dev:all": "concurrently \"pnpm run -C packages/vue-demo1 dev\" \"pnpm run -C packages/vue-demo2 dev\""
   },
   "keywords": [],
   "author": "",
@@ -25,6 +30,7 @@
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.5.0",
     "@vue/tsconfig": "^0.7.0",
+    "concurrently": "^9.1.2",
     "eslint": "^9.22.0",
     "eslint-plugin-vue": "~10.0.0",
     "jiti": "^2.4.2",
